@@ -66,30 +66,24 @@ selectTipo.addEventListener("change", () => {
   
 });
 selectOperacion.addEventListener("change", () => {
- 
-    mostrarCards(Casas.filter((item) => item.tipoDeOperacion == selectOperacion.value.toUpperCase()));
-  
-  //Operador terniario
+  mostrarCards(Casas.filter((item)=> item.tipoDeOperacion==selectOperacion.value.toUpperCase()));
 
-const casita ={
-  operacion:"Alquiler",
-  tipo:"inmueble"
-  
-  }
-  //Desafio librerias
-  const garantia=(casita.operacion==="Alquiler") 
-garantia? /*alert("Puede cotizar su garantia con nosotros")*/
+  const garantia=(selectOperacion.value==="Alquiler") 
+garantia && 
+
 Swal.fire({
-  title: "Necesita una Garantia? Cotice con nosotros",
-  showDenyButton: true,
-  confirmButtonText: 'Si por favor',
-  denyButtonText: `No gracias`,
+  title: '¿Necesita Garantia?',
+  text: 'Elija una propiedad y simule el valor de la Garantia',
+  imageUrl: 'https://www.portoseguro.com.uy/image/journal/article?img_id=2150299&t=1601295634261',
+  imageWidth: 400,
+  imageHeight: 200,
+  imageAlt: 'Custom image',
+
 })
-:
-alert(null)
-  
+})
+
   //---------------------------------------------------------------------
-});
+//FETCH CON JSON
 
 fetch('data/datos.json')
 .then(respuesta => respuesta.json())
@@ -98,9 +92,11 @@ fetch('data/datos.json')
   barrios = data.barrio
   tipoDeOperacion = data.tipoOp
   tipoDePropiedad = data.tipoProp
+
   mostrarCards(Casas)
   cargoArrayBarrios();
 })
+.catch(error=>console.log(error))
 
 //DESESTRUCTURACION
     
@@ -130,7 +126,6 @@ const{img,barrio,precio,tipoDeOperacion,id}=item
     location.href = "http://127.0.0.1:5500/vs/casa.html";
   });
 });
-
 }
 
 //Desafio DOM agrego un parrafo
@@ -140,16 +135,9 @@ const titulo2 = document.getElementById("titulo2");
 
 function cambiarTitulos() {
   titulo1.innerText = "Bienvenidos AF Propiedades";
-  titulo2.innerText = "Comience eligiendo que Operacion desea Realizar?";
+  titulo2.innerText = "Estamos para dar solucion a sus necesidades!";
 }
 cambiarTitulos();
 
 
-/*FOOTER
-function crearListaFooter() {
-  const listadoFooter = document.getElementById("listadoFooter");
-  listadoFooter.innerHTML =
-    "<li>Comprar</li><li>Vender</li><li>Alquilar</li><li>Garantia</li><li>Contacto</li>";
-}
-crearListaFooter();*/
 
