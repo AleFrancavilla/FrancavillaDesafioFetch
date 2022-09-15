@@ -40,7 +40,7 @@ function cotizarGarantia() {
 
     let cuotaIngresada= document.getElementById('cuotas').value
 
-    document.getElementById('Valor_Cuota').value = costoTotal/parseInt(cuotaIngresada).toFixed(2) //imprime el valor de la cuota en el input
+    document.getElementById('Valor_Cuota').value = (costoTotal/parseInt(cuotaIngresada)).toFixed(2) //imprime el valor de la cuota en el input
 
     console.log ("El valor a pagar por la cantidad de cuotas ingresadas es:$"+  costoTotal/parseInt(cuotaIngresada))
 }

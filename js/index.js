@@ -34,7 +34,7 @@ const barrioSearch = document.querySelector('#barrioSearch')
 
 function cargoArrayBarrios() {
   barrios.forEach((barrio) => {
-    selectBarrio.innerHTML += `<option value="${barrio}">${barrio}</option>`;
+    selectBarrio.innerHTML += `<option value="${barrio}">${barrio}</option>`
   });
   tipoDeOperacion.forEach(operacion => {
     selectOperacion.innerHTML += `<option value="${operacion}">${operacion}</option>`
@@ -45,15 +45,12 @@ function cargoArrayBarrios() {
   
 }
 
-
-
-
 search.addEventListener('click',()=>{
   mostrarCards(Casas.filter(item=> item.barrio.toLocaleLowerCase().includes(barrioSearch.value.toLowerCase())))
 })
 
 selectBarrio.addEventListener("change", () => {
-  selectBarrio.value == "todos" ?
+  selectBarrio.value == "Todos" ?
     mostrarCards(Casas)
   :
     mostrarCards(Casas.filter((item) => item.barrio == selectBarrio.value));
@@ -61,11 +58,17 @@ selectBarrio.addEventListener("change", () => {
   });
 
 selectTipo.addEventListener("change", () => {
+  selectTipo.value == "Todas" ?
+    mostrarCards(Casas)
+    :
  
     mostrarCards(Casas.filter((item) => item.tipoDePropiedad == selectTipo.value.toUpperCase()));
   
 });
 selectOperacion.addEventListener("change", () => {
+  selectOperacion.value == "Todas" ?
+    mostrarCards(Casas)
+    :
   mostrarCards(Casas.filter((item)=> item.tipoDeOperacion==selectOperacion.value.toUpperCase()));
 
   const garantia=(selectOperacion.value==="Alquiler") 
@@ -78,6 +81,7 @@ Swal.fire({
   imageWidth: 400,
   imageHeight: 200,
   imageAlt: 'Custom image',
+ 
 
 })
 })
@@ -97,6 +101,13 @@ fetch('data/datos.json')
   cargoArrayBarrios();
 })
 .catch(error=>console.log(error))
+
+/*fetch("https://www.remax.com.uy/comprar-propiedades")
+.then (responde=> response.json())
+.then (data => {
+
+let element=document.getElementById( ´´)*/
+
 
 //DESESTRUCTURACION
     

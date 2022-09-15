@@ -148,17 +148,42 @@
       "id": 13,
       "tipoDeOperacion": "ALQUILER",
       "barrio": "Almagro",
-      "habitaciones": 0,
+      "habitaciones": 2,
       "m2": 1000,
       "precio": 90000,
       "img": "https://images.pexels.com/photos/449023/pexels-photo-449023.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "img1": "https://images.pexels.com/photos/7587864/pexels-photo-7587864.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "img2": "https://images.pexels.com/photos/7546706/pexels-photo-7546706.jpeg?auto=compress&cs=tinysrgb&w=1600",
       "tipoDePropiedad": "LOCAL COMERCIAL"
+    },
+    {
+      "id": 14,
+      "tipoDeOperacion": "ALQUILER",
+      "barrio": "Ramos Mejia",
+      "habitaciones":0,
+      "m2": 500,
+      "precio": 400000,
+      "img": "https://images.pexels.com/photos/3873530/pexels-photo-3873530.jpeg?auto=compress&cs=tinysrgb&w=1260&h=1600&dpr=1",
+      "img1": "https://images.pexels.com/photos/2199190/pexels-photo-2199190.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "img2": "https://images.pexels.com/photos/1833586/pexels-photo-1833586.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "tipoDePropiedad": "LOCAL COMERCIAL"
+    },
+    {
+      "id": 15,
+      "tipoDeOperacion": "VENTA",
+      "barrio": "Quilmes",
+      "habitaciones":2,
+      "m2": 500,
+      "precio": 100000,
+      "img": "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "img1": "https://images.pexels.com/photos/7214173/pexels-photo-7214173.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=1600",
+      "img2": "https://images.pexels.com/photos/6121091/pexels-photo-6121091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=1600",
+      "tipoDePropiedad": "DEPARTAMENTO"
     }
   ],
 
  "barrio":[
+    "Barrio",
     "Todos",
     "Caballito",
     "Flores",
@@ -166,16 +191,21 @@
     "Balvanera",
     "Liniers",
     "Belgrano",
-    "Palermo"
+    "Palermo",
+    "Quilmes",
+    "VillaDelParque",
+    "Ramos Mejia"
   ],
 
  "tipoOp":[
+    "Tipo de Operacion",
     "Todas",
     "Alquiler",
     "Venta"
   ],
 
  "tipoProp":[
+    "Tipo de Propiedad",
     "Todas",
     "Casa",
     "Departamento",
