@@ -183,7 +183,6 @@
   ],
 
  "barrio":[
-    "Barrio",
     "Todos",
     "Caballito",
     "Flores",
@@ -198,14 +197,12 @@
   ],
 
  "tipoOp":[
-    "Tipo de Operacion",
     "Todas",
     "Alquiler",
     "Venta"
   ],
 
  "tipoProp":[
-    "Tipo de Propiedad",
     "Todas",
     "Casa",
     "Departamento",
